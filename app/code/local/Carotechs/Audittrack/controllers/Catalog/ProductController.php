@@ -35,6 +35,7 @@ class Carotechs_Audittrack_Catalog_ProductController extends Mage_Adminhtml_Cata
    {
      //calling parent action.
 		 	$this->variables();
+			$current_price=0;
             $productId1 = $this->getRequest()->getParam('id');
             $this->_store_id= $this->getRequest()->getParam('store');
             //get product details from product id
@@ -46,7 +47,7 @@ class Carotechs_Audittrack_Catalog_ProductController extends Mage_Adminhtml_Cata
 
       		$p_data = $this->getRequest()->getPost();
 		    $current_price=$p_data['product']['price'];
-	 
+	
 	        $pro = Mage::registry('product');
             $productId = $pro->getId();
             
@@ -83,7 +84,7 @@ class Carotechs_Audittrack_Catalog_ProductController extends Mage_Adminhtml_Cata
 
 	   	   if(Mage::getStoreConfig("Carotechs_Audittrack/AudittrackPriceAlert/Productprice"))
 		   {
-			if($price!=$current_price)
+			if(($price!=$current_price) && ($price!=0) && ($price!=''))
 			{
 				//trans_email_ident_custom1_email
 					/* Sender Name */
