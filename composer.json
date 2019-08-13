@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
-    "description": "Audit Track extension is simple but powerful mechanism to log and track the changes in various entities like Product, Category, Attribute, Price Rules and Customer.",
+    "description": "Audittrack log all actions you perform in key Magento entities in the backend of your Magento store!",
     "authors": [
     {
         "name": "Carotechs",

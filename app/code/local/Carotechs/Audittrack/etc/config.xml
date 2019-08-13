@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Carotechs
+ * @package    Carotechs_Audittrack
+ * @author     ModuleCreator
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+  <modules>
+    <Carotechs_Audittrack>
+      <version>0.1.1</version>
+    </Carotechs_Audittrack>
+  </modules>
+  <frontend>
+    <routers>
+      <audittrack>
+        <use>standard</use>
+        <args>
+          <module>Carotechs_Audittrack</module>
+          <frontName>audittrack</frontName>
+        </args>
+      </audittrack>
+    </routers>
+    <layout>
+      <updates>
+        <audittrack>
+          <file>audittrack.xml</file>
+        </audittrack>
+      </updates>
+    </layout>
+  </frontend>
+  
+  <admin>
+    <routers>
+      <adminhtml>
+			<use>admin</use>
+        <args>
+			<!--<module>Carotechs_Audittrack</module>-->
+			<modules><Carotechs_Audittrack before="Mage_Adminhtml">Carotechs_Audittrack</Carotechs_Audittrack></modules>
+        </args>
+        <!--<modules><Carotechs_Audittrack before="Mage_Adminhtml">Carotechs_Audittrack</Carotechs_Audittrack></modules>-->
+      </adminhtml>
+    </routers>
+  </admin>
+  
+		<admin>
+			<routers>
+				<audittrack>
+					<use>admin</use>
+					<args>
+						<module>Carotechs_Audittrack</module>
+						<frontName>audittrack</frontName>
+					</args>
+				</audittrack>
+			</routers>
+		</admin>
+
+  
+  <adminhtml>
+    <menu>
+      <audittrack>
+        <title>Audit Tracks</title>
+        <children>
+          <items module="audittrack">
+            <title>View Track</title>
+            <sort_order>5</sort_order>
+            <action>audittrack/adminhtml_audittrack/index</action>
+          </items>
+        </children>
+      </audittrack>
+    </menu>
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+          <children>
+            <Carotechs_Audittrack>
+              <title>Tracks</title>
+              <sort_order>10</sort_order>
+			    <children>
+         		 <items module="audittrack">
+          		  <title>View Tracks</title>
+		          </items>
+        		</children>
+            </Carotechs_Audittrack>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+    <layout>
+      <updates>
+        <audittrack>
+          <file>audittrack.xml</file>
+        </audittrack>
+      </updates>
+    </layout>
+  </adminhtml>
+  <adminhtml>
+    <acl>
+      <resources>
+        <admin>
+          <children>
+            <system>
+              <children>
+                <config>
+                  <children>
+                    <Carotechs_Audittrack translate="title" module="audittrack">
+                      <title>Carotechs Section</title>
+                      <sort_order>100</sort_order>
+                    </Carotechs_Audittrack>
+                  </children>
+                </config>
+              </children>
+            </system>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+  </adminhtml>
+  <global>
+    <models>
+      <audittrack>
+        <class>Carotechs_Audittrack_Model</class>
+        <resourceModel>audittrack_mysql4</resourceModel>
+      </audittrack>
+      <audittrack_mysql4>
+        <class>Carotechs_Audittrack_Model_Mysql4</class>
+        <entities>
+          <audittrack>
+            <table>caro_log_details</table>
+          </audittrack>
+        </entities>
+      </audittrack_mysql4>
+    </models>
+    <resources>
+      <audittrack_setup>
+        <setup>
+          <module>Carotechs_Audittrack</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </audittrack_setup>
+      <audittrack_write>
+        <connection>
+          <use>core_write</use>
+        </connection>
+      </audittrack_write>
+      <audittrack_read>
+        <connection>
+          <use>core_read</use>
+        </connection>
+      </audittrack_read>
+    </resources>
+    <blocks>
+      <audittrack>
+        <class>Carotechs_Audittrack_Block</class>
+      </audittrack>
+    </blocks>
+    <helpers>
+      <audittrack>
+        <class>Carotechs_Audittrack_Helper</class>
+      </audittrack>
+    </helpers>
+  </global>
+</config>

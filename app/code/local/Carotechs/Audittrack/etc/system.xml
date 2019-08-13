@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CarotechsCaptcha Extension
+ *
+ * @category   Carotechs
+ * @package    Carotechs_Captcha
+ * @author     Carotechs
+ * @copyright  Copyright (c) 2010 Carotechs. 
+ */
+-->
+<config>
+  <tabs>
+    <Carotechs_extensions translate="label" module="audittrack">
+      <label>Carotechs Extensions</label>
+      <sort_order>1000000</sort_order>
+    </Carotechs_extensions>
+  </tabs>
+  <sections>
+    <Carotechs_Audittrack translate="label" module="audittrack">
+      <label>Audit Track</label>
+      <tab>Carotechs_extensions</tab>
+      <frontend_type>select</frontend_type>
+      <sort_order>999999</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>0</show_in_website>
+      <show_in_store>0</show_in_store>
+      <groups>
+        <Audittrack translate="label" module="audittrack">
+          <label>Audit Track Configuration</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>0</show_in_website>
+          <show_in_store>0</show_in_store>
+          <fields>
+		  	<configinfo translate="label">
+								<frontend_model>audittrack/aboutconfig</frontend_model>
+								<sort_order>1</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>0</show_in_website>
+								<show_in_store>0</show_in_store>
+							</configinfo>	
+							
+            <Product translate="label" module="audittrack">
+              <label>Product</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </Product>
+              <Category translate="label" module="audittrack">
+              <label>Catgeory</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </Category>
+            <Attribute translate="label" module="audittrack">
+              <label>Attribute</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </Attribute>
+            <Attributeset translate="label" module="audittrack">
+              <label>Attribute Set</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </Attributeset>
+            <Promocat translate="label" module="audittrack">
+              <label>Catalog Price Rule</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </Promocat>
+            <Promoshop translate="label" module="audittrack">
+              <label>Shopping Cart Price</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </Promoshop>
+            <Customer translate="label" module="audittrack">
+              <label>Customer</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </Customer>
+          </fields>
+        </Audittrack>
+		<AudittrackPriceAlert>
+		 <label>Price Update Notification</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>2</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>0</show_in_website>
+          <show_in_store>0</show_in_store>
+          <fields>		
+		  	<info translate="label">
+								<frontend_model>audittrack/aboutprice</frontend_model>
+								<sort_order>1</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>0</show_in_website>
+								<show_in_store>0</show_in_store>
+							</info>				
+
+	          <Productprice translate="label" module="audittrack">
+              <label>Send Notification</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+              </Productprice>
+			  
+	          <Email translate="label" module="audittrack">
+              <label>Email for notification</label>
+			  <comment>example: john@gmail.com</comment>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+              </Email>
+		</fields>
+		</AudittrackPriceAlert>
+      </groups>
+    </Carotechs_Audittrack>
+  </sections>
+</config>
