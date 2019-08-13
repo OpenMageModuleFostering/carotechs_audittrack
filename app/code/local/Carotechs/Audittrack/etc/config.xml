@@ -10,7 +10,7 @@
 <config>
   <modules>
     <Carotechs_Audittrack>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
     </Carotechs_Audittrack>
   </modules>
   <frontend>
