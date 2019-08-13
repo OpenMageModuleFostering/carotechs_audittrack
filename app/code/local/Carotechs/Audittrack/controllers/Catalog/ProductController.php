@@ -83,7 +83,7 @@ class Carotechs_Audittrack_Catalog_ProductController extends Mage_Adminhtml_Cata
 
 	   	   if(Mage::getStoreConfig("Carotechs_Audittrack/AudittrackPriceAlert/Productprice"))
 		   {
-			if(1)//$price!=$current_price)
+			if($price!=$current_price)
 			{
 				//trans_email_ident_custom1_email
 					/* Sender Name */
