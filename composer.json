@@ -1,9 +1,9 @@
 {
     "name": "OpenMageModuleFostering/Carotechs_Audittrack",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSLv3.0",
     "homepage": "",
-    "description": "Audittrack log all actions you perform in key Magento entities in the backend of your Magento store!",
+    "description": "Audit track",
     "authors": [
     {
         "name": "Carotechs",

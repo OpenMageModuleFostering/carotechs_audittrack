@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<layout version="0.1.4">
+<layout version="0.1.0">
     <audittrack_adminhtml_audittrack_index>
         <reference name="content">
             <block type="audittrack/adminhtml_audittrack" name="audittrack" />

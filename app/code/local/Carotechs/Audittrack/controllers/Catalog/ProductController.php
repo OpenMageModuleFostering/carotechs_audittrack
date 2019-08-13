@@ -35,7 +35,6 @@ class Carotechs_Audittrack_Catalog_ProductController extends Mage_Adminhtml_Cata
    {
      //calling parent action.
 		 	$this->variables();
-			$current_price=0;
             $productId1 = $this->getRequest()->getParam('id');
             $this->_store_id= $this->getRequest()->getParam('store');
             //get product details from product id
@@ -47,7 +46,7 @@ class Carotechs_Audittrack_Catalog_ProductController extends Mage_Adminhtml_Cata
 
       		$p_data = $this->getRequest()->getPost();
 		    $current_price=$p_data['product']['price'];
-	
+	 
 	        $pro = Mage::registry('product');
             $productId = $pro->getId();
             
@@ -84,19 +83,19 @@ class Carotechs_Audittrack_Catalog_ProductController extends Mage_Adminhtml_Cata
 
 	   	   if(Mage::getStoreConfig("Carotechs_Audittrack/AudittrackPriceAlert/Productprice"))
 		   {
-			if(($price!=$current_price) && ($price!=0) && ($price!=''))
+			if($price!=$current_price)
 			{
 				//trans_email_ident_custom1_email
 					/* Sender Name */
-				$from=Mage::getStoreConfig('trans_email/ident_sales/name');
-				$from_email=Mage::getStoreConfig('trans_email/ident_sales/email');				
+				$from=Mage::getStoreConfig('trans_email/ident_custom2/name');
 				/* Sender Email */
 				$to=Mage::getStoreConfig("Carotechs_Audittrack/AudittrackPriceAlert/Email");
 				$subject='Product update notification.';
-				$headers = "From: $from <$from_email>". "\r\n";
+				$headers = 'From: BDS Sales <sales@backdropsource.com>' . "\r\n";
 			    $headers .= "Content-type: text/html\r\n";
 				$message = 'Product Details are changed for <b>'.$p_name.'</b><br/>';
 				$message .= '<b> ID :</b>'.$productId.'<br/><b>Sku :</b>'.$sku.'<br/><b>Previous Price : </b>'.$price.'<br/><b>Current Price :</b>'.$current_price.'<br/><b>Website :</b>'.$this->_store_name;
+				//echo $message;die();
 				mail($to,$subject,$message,$headers);
 			}
 		 }

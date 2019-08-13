@@ -12,7 +12,7 @@ class Carotechs_Audittrack_Block_Adminhtml_Audittrack_Grid extends Mage_Adminhtm
 
   protected function _prepareCollection()
   {
-      $collection = Mage::getModel('audittrack/audittrack')->getCollection()->setOrder('log_id', 'DESC');;
+      $collection = Mage::getModel('audittrack/audittrack')->getCollection()->setOrder('log_date');
       $this->setCollection($collection);
       return parent::_prepareCollection();
   }

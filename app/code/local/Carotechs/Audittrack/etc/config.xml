@@ -10,7 +10,7 @@
 <config>
   <modules>
     <Carotechs_Audittrack>
-      <version>0.1.4</version>
+      <version>0.1.0</version>
     </Carotechs_Audittrack>
   </modules>
   <frontend>
@@ -31,33 +31,18 @@
       </updates>
     </layout>
   </frontend>
-  
   <admin>
     <routers>
       <adminhtml>
-			<use>admin</use>
         <args>
-			<!--<module>Carotechs_Audittrack</module>-->
-			<modules><Carotechs_Audittrack before="Mage_Adminhtml">Carotechs_Audittrack</Carotechs_Audittrack></modules>
+			<use>admin</use>
+          <modules>
+            <Carotechs_Audittrack before="Mage_Adminhtml">Carotechs_Audittrack</Carotechs_Audittrack>
+          </modules>
         </args>
-        <!--<modules><Carotechs_Audittrack before="Mage_Adminhtml">Carotechs_Audittrack</Carotechs_Audittrack></modules>-->
       </adminhtml>
     </routers>
   </admin>
-  
-		<admin>
-			<routers>
-				<audittrack>
-					<use>admin</use>
-					<args>
-						<module>Carotechs_Audittrack</module>
-						<frontName>audittrack</frontName>
-					</args>
-				</audittrack>
-			</routers>
-		</admin>
-
-  
   <adminhtml>
     <menu>
       <audittrack>
@@ -66,7 +51,7 @@
           <items module="audittrack">
             <title>View Track</title>
             <sort_order>5</sort_order>
-            <action>audittrack/adminhtml_audittrack/index</action>
+            <action>audittrack/adminhtml_audittrack</action>
           </items>
         </children>
       </audittrack>
@@ -78,15 +63,15 @@
         </all>
         <admin>
           <children>
-            <Carotechs_Audittrack>
-              <title>Tracks</title>
+            <audittrack translate="title" module="audittrack">
+              <title>Audit Tracks</title>
               <sort_order>10</sort_order>
 			    <children>
          		 <items module="audittrack">
           		  <title>View Tracks</title>
 		          </items>
         		</children>
-            </Carotechs_Audittrack>
+            </audittrack>
           </children>
         </admin>
       </resources>
