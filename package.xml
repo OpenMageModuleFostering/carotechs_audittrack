@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Carotechs_Audittrack</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Audit Track extension is simple but powerful mechanism to log and track the changes in various entities like Product, Category, Attribute, Price Rules and Customer.</summary>
+    <description>Audit Track extension is simple but powerful mechanism to log and track the changes in various entities like Product, Category, Attribute, Price Rules and Customer.&#xD;
+&#xD;
+It also allows to send email notification when the product price is updated.</description>
+    <notes>First Release</notes>
+    <authors><author><name>Carotechs</name><user>carotechsinc</user><email>apps@carotechs.com</email></author></authors>
+    <date>2013-07-12</date>
+    <time>10:20:58</time>
+    <contents><target name="magelocal"><dir name="Carotechs"><file name="Audittrack" hash=""/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="audittrack.xml" hash="73d7014c2371143c3a9f34683c446c51"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Carotechs_Audittrack.xml" hash="9f1a85ba90bd65b2bb44127e02b40331"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
