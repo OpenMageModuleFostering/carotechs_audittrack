@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Carotechs_Audittrack",
+    "name": "openmage-module-fostering\/carotechs_audittrack",
     "type": "magento-module",
-    "license": "OSLv3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Audit track",
     "authors": [
