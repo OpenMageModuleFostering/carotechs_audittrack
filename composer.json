@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Carotechs_Audittrack",
+    "name": "OpenMageModuleFostering\/Carotechs_Audittrack",
     "type": "magento-module",
     "license": "OSLv3.0",
     "homepage": "",
     "description": "Audit track",
     "authors": [
-    {
-        "name": "Carotechs",
-        "email": "apps@carotechs.com"
-    }
-],
+        {
+            "name": "Carotechs",
+            "email": "apps@carotechs.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
